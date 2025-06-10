@@ -1,0 +1,169 @@
+@import './base.css';
+
+/* 全局CSS变量定义 */
+:root {
+  --primary-color: #842029; /* 赭石红 */
+  --primary-hover: #9a2530;
+  --text-dark: #333333; /* 墨黑 */
+  --text-medium: #666666;
+  --text-light: #999999;
+  --bg-light: #f9f5f0; /* 米白 */
+  --bg-white: #ffffff;
+  --border-light: #e6e6e6;
+
+  /* 性能相关变量 */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+  --content-width: 1200px;
+  --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 全局优化：平滑滚动和硬件加速 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 应用容器优化 */
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  /* 开启GPU加速 */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* 链接样式优化 */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition-fast) ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* 图片优化 */
+img {
+  max-width: 100%;
+  height: auto;
+  /* 图像渲染优化 */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* 平滑动画 */
+.animate-fade {
+  animation: fade var(--transition-normal) ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up var(--transition-normal) ease-out;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 内容加载占位符 */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 定义通用字体 */
+.kaiti {
+  font-family: 'STKaiti', 'KaiTi', serif;
+}
+
+.heiti {
+  font-family: 'STXihei', 'Microsoft YaHei', sans-serif;
+}
+
+/* 响应式媒体查询 - 性能优化 */
+@media (min-width: 1024px) {
+  #app {
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+}
+
+/* 预加载提示 */
+.content-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 图片懒加载占位符 */
+.lazy-image {
+  opacity: 0;
+  transition: opacity var(--transition-normal) ease;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* 打印媒体查询优化 */
+@media print {
+  /* 隐藏不需要打印的元素 */
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  /* 打印时优化颜色 */
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+/* 减少动画对CPU的占用 - 用户偏好减少动画 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

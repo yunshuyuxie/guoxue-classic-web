@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>国学经典 - 传承国学经典，弘扬中华文化</title>
+    <meta
+      name="description"
+      content="国学经典学习网站，提供经典著作、诗词歌赋、名句赏析、知识测验等内容，传承中华文化，弘扬国学精神。"
+    />
+    <meta name="keywords" content="国学,经典,四书五经,诗词,古文,传统文化" />
+    <!-- 预连接常用域名 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- DNS预获取 -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- 资源预加载 -->
+    <link rel="preload" href="/images/login-bg.png" as="image" />
+    <!-- 渐进式Web应用支持 -->
+    <meta name="theme-color" content="#842029" />
+    <!-- 移动端优化 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- 性能优化 -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <!-- 添加移动端图标 -->
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    <!-- 关键渲染路径优化 -->
+    <style>
+      /* 关键CSS内联 */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'STXihei', 'Microsoft YaHei', sans-serif;
+        color: #333;
+        background-color: #f9f5f0;
+      }
+      .app-loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f5f0;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+      }
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(132, 32, 41, 0.3);
+        border-radius: 50%;
+        border-top-color: #842029;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-loading" id="app-loading">
+      <div class="loading-spinner"></div>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      // 移除加载画面
+      window.addEventListener('load', function () {
+        const loadingElement = document.getElementById('app-loading')
+        if (loadingElement) {
+          loadingElement.style.opacity = '0'
+          setTimeout(function () {
+            loadingElement.style.display = 'none'
+          }, 300)
+        }
+      })
+    </script>
+  </body>
+</html>

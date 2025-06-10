@@ -1,0 +1,17 @@
+# 国学经典网站 Robots.txt
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /profile
+Disallow: /onboarding
+Disallow: /learning-center
+Disallow: /quiz/review/
+Disallow: /quiz/history
+
+# 爬虫抓取频率限制
+Crawl-delay: 10
+
+# 站点地图
+Sitemap: https://example.com/sitemap.xml 
