@@ -4,18 +4,22 @@
       <h1>关于我们</h1>
       <p>传承中华文化，弘扬国学精神</p>
     </div>
-    
+
     <div class="about-content">
       <tiny-card class="about-section">
         <h2>网站简介</h2>
-        <p>国学经典学习网站致力于传播和弘扬中国传统文化，为广大国学爱好者提供一个系统学习、交流探讨的平台。本网站收录了丰富的国学经典著作，包括四书五经、诸子百家等，并提供原文、注释、译文等多种学习资料，帮助用户更好地理解和掌握国学经典内容。</p>
+        <p>
+          国学经典学习网站致力于传播和弘扬中国传统文化，为广大国学爱好者提供一个系统学习、交流探讨的平台。本网站收录了丰富的国学经典著作，包括四书五经、诸子百家等，并提供原文、注释、译文等多种学习资料，帮助用户更好地理解和掌握国学经典内容。
+        </p>
       </tiny-card>
-      
+
       <tiny-card class="about-section">
         <h2>我们的使命</h2>
-        <p>在当今全球化的时代背景下，中华优秀传统文化的传承和发展显得尤为重要。我们的使命是通过数字化手段，将国学经典以更加现代、便捷的方式呈现给用户，让更多人能够接触、了解、学习中国传统文化的精髓，从而增强文化自信，汲取古人智慧，指导现代生活。</p>
+        <p>
+          在当今全球化的时代背景下，中华优秀传统文化的传承和发展显得尤为重要。我们的使命是通过数字化手段，将国学经典以更加现代、便捷的方式呈现给用户，让更多人能够接触、了解、学习中国传统文化的精髓，从而增强文化自信，汲取古人智慧，指导现代生活。
+        </p>
       </tiny-card>
-      
+
       <tiny-card class="about-section">
         <h2>核心理念</h2>
         <tiny-row :gutter="20" class="values-row">
@@ -42,12 +46,12 @@
           </tiny-col>
         </tiny-row>
       </tiny-card>
-      
+
       <tiny-card class="about-section">
         <h2>联系我们</h2>
         <p>如果您有任何问题、建议或合作意向，欢迎通过以下方式联系我们：</p>
         <div class="contact-info">
-          <p><tiny-icon name="message"></tiny-icon> 邮箱：contact@guoxue-classic.com</p>
+          <p><tiny-icon name="message"></tiny-icon> 邮箱：contact@guoxue-classic-web.com</p>
           <p><tiny-icon name="phone"></tiny-icon> 电话：010-12345678</p>
           <p><tiny-icon name="location"></tiny-icon> 地址：北京市海淀区中关村南大街5号</p>
         </div>
@@ -100,7 +104,7 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background-color: #409EFF;
+  background-color: #409eff;
 }
 
 .about-section p {
@@ -144,7 +148,7 @@
 
 .contact-info .tiny-icon {
   margin-right: 10px;
-  color: #409EFF;
+  color: #409eff;
 }
 
 @media (max-width: 768px) {

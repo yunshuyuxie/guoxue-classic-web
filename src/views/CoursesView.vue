@@ -11,21 +11,21 @@ const banners = ref([
     id: 1,
     title: '四书精读系列课程',
     subtitle: '跟随名师领略儒家经典智慧',
-    image: '/images/courses/banner1.png',
+    image: 'images/courses/banner1.png',
     link: '/course/101',
   },
   {
     id: 2,
     title: '诗词鉴赏专题讲座',
     subtitle: '感受古典诗词之美，提升文学素养',
-    image: '/images/courses/banner2.png',
+    image: 'images/courses/banner2.png',
     link: '/course/102',
   },
   {
     id: 3,
     title: '国学与现代生活',
     subtitle: '传统智慧在当代的应用与实践',
-    image: '/images/courses/banner3.png',
+    image: 'images/courses/banner3.png',
     link: '/course/103',
   },
 ])
@@ -69,10 +69,10 @@ const courses = ref([
   {
     id: 101,
     title: '《论语》精读',
-    cover: '/images/courses/lunyu.png',
+    cover: 'images/courses/lunyu.png',
     instructor: '王立国',
     instructorTitle: '北京大学哲学系教授',
-    instructorAvatar: '/images/instructors/wang.png',
+    instructorAvatar: 'images/instructors/wang.png',
     duration: '24课时',
     rating: 4.9,
     students: 1256,
@@ -91,10 +91,10 @@ const courses = ref([
   {
     id: 102,
     title: '唐诗宋词鉴赏',
-    cover: '/images/courses/poetry.png',
+    cover: 'images/courses/poetry.png',
     instructor: '李清华',
     instructorTitle: '中国人民大学文学院教授',
-    instructorAvatar: '/images/instructors/li.png',
+    instructorAvatar: 'images/instructors/li.png',
     duration: '36课时',
     rating: 4.8,
     students: 987,
@@ -112,10 +112,10 @@ const courses = ref([
   {
     id: 103,
     title: '国学智慧与现代管理',
-    cover: '/images/courses/management.png',
+    cover: 'images/courses/management.png',
     instructor: '张明德',
     instructorTitle: '清华大学管理学院教授',
-    instructorAvatar: '/images/instructors/zhang.png',
+    instructorAvatar: 'images/instructors/zhang.png',
     duration: '18课时',
     rating: 4.7,
     students: 1542,
@@ -133,10 +133,10 @@ const courses = ref([
   {
     id: 104,
     title: '中国传统礼仪文化',
-    cover: '/images/courses/etiquette.png',
+    cover: 'images/courses/etiquette.png',
     instructor: '赵文华',
     instructorTitle: '北京师范大学文化研究所研究员',
-    instructorAvatar: '/images/instructors/zhao.png',
+    instructorAvatar: 'images/instructors/zhao.png',
     duration: '12课时',
     rating: 4.6,
     students: 876,
@@ -154,10 +154,10 @@ const courses = ref([
   {
     id: 105,
     title: '道家思想解读',
-    cover: '/images/courses/daoism.png',
+    cover: 'images/courses/daoism.png',
     instructor: '吴德本',
     instructorTitle: '复旦大学哲学系教授',
-    instructorAvatar: '/images/instructors/wu.png',
+    instructorAvatar: 'images/instructors/wu.png',
     duration: '20课时',
     rating: 4.9,
     students: 1024,
@@ -175,10 +175,10 @@ const courses = ref([
   {
     id: 106,
     title: '《大学》《中庸》精读',
-    cover: '/images/courses/daxue.png',
+    cover: 'images/courses/daxue.png',
     instructor: '王立国',
     instructorTitle: '北京大学哲学系教授',
-    instructorAvatar: '/images/instructors/wang.png',
+    instructorAvatar: 'images/instructors/wang.png',
     duration: '16课时',
     rating: 4.8,
     students: 892,
@@ -248,7 +248,7 @@ const liveCourses = ref([
     instructor: '吴德本',
     date: '2023-10-25',
     time: '19:30-21:00',
-    cover: '/images/courses/zhouyi_live.png',
+    cover: 'images/courses/zhouyi_live.png',
     enrolled: 356,
     capacity: 500,
   },
@@ -258,7 +258,7 @@ const liveCourses = ref([
     instructor: '李清华',
     date: '2023-10-28',
     time: '15:00-16:30',
-    cover: '/images/courses/tangshi_live.png',
+    cover: 'images/courses/tangshi_live.png',
     enrolled: 289,
     capacity: 400,
   },
@@ -268,7 +268,7 @@ const liveCourses = ref([
     instructor: '张明德',
     date: '2023-11-01',
     time: '20:00-21:30',
-    cover: '/images/courses/family_live.png',
+    cover: 'images/courses/family_live.png',
     enrolled: 412,
     capacity: 600,
   },
@@ -278,7 +278,7 @@ const liveCourses = ref([
     instructor: '王立国',
     date: '2023-11-05',
     time: '19:00-20:30',
-    cover: '/images/courses/lunyu_live.png',
+    cover: 'images/courses/lunyu_live.png',
     enrolled: 278,
     capacity: 500,
   },
@@ -947,7 +947,7 @@ onBeforeUnmount(() => {
   position: relative;
   width: 80px;
   height: 16px;
-  background-image: url('/images/icons/stars-empty.svg');
+  background-image: url('images/icons/stars-empty.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -957,7 +957,7 @@ onBeforeUnmount(() => {
   top: 0;
   left: 0;
   height: 100%;
-  background-image: url('/images/icons/stars-filled.svg');
+  background-image: url('images/icons/stars-filled.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }

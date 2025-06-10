@@ -91,7 +91,7 @@ const mockLunyu: Book = {
   dynasty: '先秦',
   historicalSignificance:
     '《论语》是儒家学派的经典著作之一，由孔子的弟子及其再传弟子编撰而成，记录了孔子及其弟子的言行，集中体现了孔子的思想，是儒家思想的重要经典，对中国传统文化产生了深远影响。',
-  cover: '/images/books/lunyu.png',
+  cover: 'images/books/lunyu.png',
   description:
     '《论语》记录了孔子及其弟子的言行，是儒家思想的重要经典，对中国传统文化产生了深远影响。',
   chapters: [

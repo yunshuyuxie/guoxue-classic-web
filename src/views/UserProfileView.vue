@@ -30,14 +30,14 @@ const privacyOptions = [
 
 // 传统文化头像选项
 const avatarOptions = [
-  { id: 1, src: '/images/avatars/confucius.png', name: '孔子' },
-  { id: 2, src: '/images/avatars/laozi.png', name: '老子' },
-  { id: 3, src: '/images/avatars/zhuangzi.png', name: '庄子' },
-  { id: 4, src: '/images/avatars/mencius.png', name: '孟子' },
-  { id: 5, src: '/images/avatars/sunzi.png', name: '孙子' },
-  { id: 6, src: '/images/avatars/mulan.png', name: '花木兰' },
-  { id: 7, src: '/images/avatars/wangxifeng.png', name: '王熙凤' },
-  { id: 8, src: '/images/avatars/linDaiyu.png', name: '林黛玉' },
+  { id: 1, src: 'images/avatars/confucius.png', name: '孔子' },
+  { id: 2, src: 'images/avatars/laozi.png', name: '老子' },
+  { id: 3, src: 'images/avatars/zhuangzi.png', name: '庄子' },
+  { id: 4, src: 'images/avatars/mencius.png', name: '孟子' },
+  { id: 5, src: 'images/avatars/sunzi.png', name: '孙子' },
+  { id: 6, src: 'images/avatars/mulan.png', name: '花木兰' },
+  { id: 7, src: 'images/avatars/wangxifeng.png', name: '王熙凤' },
+  { id: 8, src: 'images/avatars/linDaiyu.png', name: '林黛玉' },
 ]
 
 // 编辑模式状态
@@ -47,7 +47,7 @@ const isEditMode = ref(false)
 const userProfile = reactive({
   username: '国学爱好者',
   nickname: '子曰诗云',
-  avatar: '/images/avatars/confucius.png',
+  avatar: 'images/avatars/confucius.png',
   selectedAvatarId: 1,
   role: 'enthusiast',
   interests: ['classics', 'poetry', 'philosophy'],

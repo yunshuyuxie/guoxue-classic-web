@@ -10,7 +10,7 @@ const classicBooks = ref([
     id: 1,
     title: '论语',
     author: '孔子及其弟子',
-    cover: '/images/books/lunyu.png',
+    cover: 'images/books/lunyu.png',
     description:
       '《论语》记录了孔子及其弟子的言行，是儒家思想的重要经典，对中国传统文化产生了深远影响。',
   },
@@ -18,7 +18,7 @@ const classicBooks = ref([
     id: 2,
     title: '大学',
     author: '曾子',
-    cover: '/images/books/daxue.png',
+    cover: 'images/books/daxue.png',
     description:
       '《大学》阐述"修身齐家治国平天下"的治学次第，是儒家思想的重要代表作，也是四书之一。',
   },
@@ -26,14 +26,14 @@ const classicBooks = ref([
     id: 3,
     title: '中庸',
     author: '子思',
-    cover: '/images/books/zhongyong.png',
+    cover: 'images/books/zhongyong.png',
     description: '《中庸》强调"中和"思想，阐述"诚"的哲学，体现了中国传统文化中的中正平和精神。',
   },
   {
     id: 4,
     title: '孟子',
     author: '孟子及其弟子',
-    cover: '/images/books/mengzi.png',
+    cover: 'images/books/mengzi.png',
     description: '《孟子》记录了孟子的言行和思想，提出"仁政"、"性善论"等重要观点，是儒家经典著作。',
   },
 ])
@@ -170,7 +170,7 @@ const goToBookDetail = (id: number) => {
 
 /* 水墨背景横幅 */
 .hero {
-  background-image: url('https://img.51miz.com/Element/00/71/99/28/7755928_E719928_bf82292d.png');
+  background-image: url('/images/shuimobeijing.png');
   background-size: cover;
   background-position: center;
   position: relative;

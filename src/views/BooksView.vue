@@ -134,7 +134,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/lunyu.png',
+    cover: 'images/books/lunyu.png',
     description:
       '《论语》记录了孔子及其弟子的言行，是儒家思想的重要经典，对中国传统文化产生了深远影响。',
   },
@@ -145,7 +145,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/daxue.png',
+    cover: 'images/books/daxue.png',
     description:
       '《大学》阐述"修身齐家治国平天下"的治学次第，是儒家思想的重要代表作，也是四书之一。',
   },
@@ -156,7 +156,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/zhongyong.png',
+    cover: 'images/books/zhongyong.png',
     description: '《中庸》强调"中和"思想，阐述"诚"的哲学，体现了中国传统文化中的中正平和精神。',
   },
   {
@@ -166,7 +166,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/mengzi.png',
+    cover: 'images/books/mengzi.png',
     description: '《孟子》记录了孟子的言行和思想，提出"仁政"、"性善论"等重要观点，是儒家经典著作。',
   },
   {
@@ -176,7 +176,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '道家',
     type: '子部',
-    cover: '/images/books/laozi.png',
+    cover: 'images/books/laozi.png',
     description:
       '《老子》又称《道德经》，是道家学派的经典著作，阐述了"道"与"德"的哲学思想，对中国哲学产生了深远影响。',
   },
@@ -187,7 +187,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '道家',
     type: '子部',
-    cover: '/images/books/zhuangzi.png',
+    cover: 'images/books/zhuangzi.png',
     description:
       '《庄子》是道家学派的重要著作，以寓言故事阐述哲理，富有想象力和文学性，对后世文学创作有深远影响。',
   },
@@ -198,7 +198,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '法家',
     type: '子部',
-    cover: '/images/books/hanfeizi.png',
+    cover: 'images/books/hanfeizi.png',
     description:
       '《韩非子》是法家思想的集大成者，系统阐述了法、术、势相结合的政治理论，对秦朝的统一和中央集权制度的形成产生重要影响。',
   },
@@ -209,7 +209,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '墨家',
     type: '子部',
-    cover: '/images/books/mozi.png',
+    cover: 'images/books/mozi.png',
     description:
       '《墨子》记录了墨家学派的思想，提出"兼爱""非攻"等主张，形成了与儒家分庭抗礼的显学。',
   },
@@ -220,7 +220,7 @@ const allBooks = ref<Book[]>([
     dynasty: '汉代',
     school: '史学',
     type: '史部',
-    cover: '/images/books/shiji.png',
+    cover: 'images/books/shiji.png',
     description:
       '《史记》是中国第一部纪传体通史，记载了上自黄帝下至汉武帝时期约三千年的历史，被鲁迅誉为"史家之绝唱，无韵之离骚"。',
   },
@@ -231,7 +231,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/shijing.png',
+    cover: 'images/books/shijing.png',
     description:
       '《诗经》是中国最早的诗歌总集，收录了西周初年至春秋中叶的诗歌305篇，分为风、雅、颂三部分。',
   },
@@ -242,7 +242,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '楚文化',
     type: '集部',
-    cover: '/images/books/chuci.png',
+    cover: 'images/books/chuci.png',
     description:
       '《楚辞》是以屈原作品为主的诗歌集，代表了南方楚国的文化特色，对后世文学创作有深远影响。',
   },
@@ -253,7 +253,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/zhouyi.png',
+    cover: 'images/books/zhouyi.png',
     description:
       '《周易》是中国最古老的经典之一，内容包括卦象、爻辞和十翼，是研究宇宙自然规律和人生哲理的重要著作。',
   },
@@ -264,7 +264,7 @@ const allBooks = ref<Book[]>([
     dynasty: '清代',
     school: '文学',
     type: '集部',
-    cover: '/images/books/tangshisanbaishou.png',
+    cover: 'images/books/tangshisanbaishou.png',
     description:
       '《唐诗三百首》是清代蘅塘退士编选的唐代诗歌选集，收录了唐代诗人的代表作品，是中国古典诗歌的经典选集。',
   },
@@ -275,7 +275,7 @@ const allBooks = ref<Book[]>([
     dynasty: '清代',
     school: '文学',
     type: '集部',
-    cover: '/images/books/songci.png',
+    cover: 'images/books/songci.png',
     description:
       '《宋词三百首》是清代朱孝臧编选的宋代词作选集，收录了宋代词人的代表作品，是中国古典词作的经典选集。',
   },
@@ -286,7 +286,7 @@ const allBooks = ref<Book[]>([
     dynasty: '宋代',
     school: '史学',
     type: '史部',
-    cover: '/images/books/zhi.png',
+    cover: 'images/books/zhi.png',
     description:
       '《资治通鉴》是一部编年体通史，记载了从战国末期到五代末期共1362年的历史，是中国古代最著名的史学著作之一。',
   },
@@ -297,7 +297,7 @@ const allBooks = ref<Book[]>([
     dynasty: '先秦',
     school: '兵家',
     type: '子部',
-    cover: '/images/books/sunzi.png',
+    cover: 'images/books/sunzi.png',
     description:
       '《孙子兵法》是中国古代最著名的兵书，论述了战争的基本原则和策略，对世界军事理论有深远影响。',
   },

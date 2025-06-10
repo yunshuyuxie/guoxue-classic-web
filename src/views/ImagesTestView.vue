@@ -4,10 +4,10 @@ import imageErrorHandler from '../utils/imageErrorHandler'
 
 // 测试图片列表
 const errorImages = [
-  '/images/books/lunyu.png',
-  '/images/books/daxue.png',
-  '/images/books/zhongyong.png',
-  '/images/books/mengzi.png',
+  'images/books/lunyu.png',
+  'images/books/daxue.png',
+  'images/books/zhongyong.png',
+  'images/books/mengzi.png',
 ]
 
 // 测试类型

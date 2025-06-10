@@ -54,7 +54,7 @@ const booksDatabase: Book[] = [
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/lunyu.png',
+    cover: 'images/books/lunyu.png',
     description:
       '《论语》记录了孔子及其弟子的言行，是儒家思想的重要经典，对中国传统文化产生了深远影响。',
     content: [
@@ -82,7 +82,7 @@ const booksDatabase: Book[] = [
     dynasty: '先秦',
     school: '儒家',
     type: '经部',
-    cover: '/images/books/daxue.png',
+    cover: 'images/books/daxue.png',
     description:
       '《大学》阐述"修身齐家治国平天下"的治学次第，是儒家思想的重要代表作，也是四书之一。',
     content: [

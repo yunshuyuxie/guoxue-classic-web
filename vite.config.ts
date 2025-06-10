@@ -7,10 +7,17 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/guoxue-classic-web/' : '/',
   plugins: [vue(), vueJsx(), VueDevTools()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  server: {
+    port: 5173,
+    hmr: {
+      overlay: false,
     },
   },
   build: {
@@ -41,16 +48,6 @@ export default defineConfig({
     reportCompressedSize: false,
     // 限制chunk大小警告的阈值
     chunkSizeWarningLimit: 1000,
-  },
-  // 开发服务器配置
-  server: {
-    port: 5173,
-    // 热更新优化
-    hmr: {
-      overlay: false,
-    },
-    // 压缩传输内容
-    compress: true,
   },
   // 预加载选项
   optimizeDeps: {

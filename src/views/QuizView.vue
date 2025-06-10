@@ -71,11 +71,11 @@ const isDailyCompleted = ref(false)
 
 // 排行榜数据
 const leaderboard = ref([
-  { rank: 1, username: '国学大师', avatar: '/images/avatars/avatar1.png', points: 9800 },
-  { rank: 2, username: '诗词达人', avatar: '/images/avatars/avatar2.png', points: 9650 },
-  { rank: 3, username: '文化传承者', avatar: '/images/avatars/avatar3.png', points: 9320 },
-  { rank: 4, username: '经典守护', avatar: '/images/avatars/avatar4.png', points: 8950 },
-  { rank: 5, username: '知礼明义', avatar: '/images/avatars/avatar5.png', points: 8820 },
+  { rank: 1, username: '国学大师', avatar: 'images/avatars/avatar1.png', points: 9800 },
+  { rank: 2, username: '诗词达人', avatar: 'images/avatars/avatar2.png', points: 9650 },
+  { rank: 3, username: '文化传承者', avatar: 'images/avatars/avatar3.png', points: 9320 },
+  { rank: 4, username: '经典守护', avatar: 'images/avatars/avatar4.png', points: 8950 },
+  { rank: 5, username: '知礼明义', avatar: 'images/avatars/avatar5.png', points: 8820 },
 ])
 
 // 获取用户信息和每日一题
