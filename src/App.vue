@@ -9,8 +9,51 @@ const QuoteShake = defineAsyncComponent(() => import('./components/QuoteShake.vu
 // 导入图片错误处理组件
 import ImageErrorHandler from './components/ImageErrorHandler.vue'
 
-const activeIndex = ref('1')
+const menuList = ref([
+  {
+    title: '首页',
+    url: '/',
+    id: '1',
+  },
+  {
+    title: '经典书籍',
+    url: '/books',
+    id: '2',
+  },
+  {
+    title: '知识测验',
+    url: '/quiz',
+    id: '3',
+  },
+  {
+    title: '国学讲堂',
+    url: '/courses',
+    id: '4',
+  },
+  {
+    title: '学习社区',
+    url: '/community',
+    id: '5',
+  },
+  {
+    title: '学习中心',
+    url: '/learning-center',
+    id: '6',
+  },
+  {
+    title: '关于我们',
+    url: '/about',
+    id: '7',
+  },
+  // {
+  //   title: '图片测试',
+  //   url: '/images-test',
+  //   id: '8',
+  // },
+])
+
 const route = useRoute()
+const activeIndex = ref('')
 
 // 设备检测
 const isMobile = ref(false)
@@ -89,6 +132,12 @@ const isPrimaryRoute = () => {
 }
 
 onMounted(() => {
+  const menuItem = menuList.value.find((item) => item.url === route.path)
+  if (menuItem?.id) {
+    activeIndex.value = menuItem.id
+  } else {
+    activeIndex.value = '1'
+  }
   // 初始检测设备类型
   checkMobile()
 
@@ -114,21 +163,20 @@ onUnmounted(() => {
 <template>
   <div class="common-layout" :class="{ 'is-mobile': isMobile }">
     <tiny-layout>
-      <tiny-header>
+      <tiny-row>
         <div class="header-content">
           <div class="logo">
             <h1>国学经典</h1>
           </div>
-          <tiny-menu :default-active="activeIndex" class="tiny-menu-demo" mode="horizontal" router>
-            <tiny-menu-item index="/">首页</tiny-menu-item>
-            <tiny-menu-item index="/books">经典书籍</tiny-menu-item>
-            <tiny-menu-item index="/quiz">知识测验</tiny-menu-item>
-            <tiny-menu-item index="/courses">国学讲堂</tiny-menu-item>
-            <tiny-menu-item index="/community">学习社区</tiny-menu-item>
-            <tiny-menu-item index="/learning-center">学习中心</tiny-menu-item>
-            <tiny-menu-item index="/about">关于我们</tiny-menu-item>
-            <tiny-menu-item index="/images-test">图片测试</tiny-menu-item>
-          </tiny-menu>
+          <div class="tiny-menu-demo">
+            <tiny-nav-menu
+              :data="menuList"
+              :defaultActive="activeIndex"
+              allow-full-url
+              overflow="fiexd"
+            >
+            </tiny-nav-menu>
+          </div>
           <div class="user-actions">
             <tiny-button type="primary" plain size="small" @click="$router.push('/login')"
               >登录</tiny-button
@@ -138,15 +186,15 @@ onUnmounted(() => {
             >
           </div>
         </div>
-      </tiny-header>
-      <tiny-main>
+      </tiny-row>
+      <tiny-row>
         <!-- 优化：使用KeepAlive缓存常用路由 -->
         <keep-alive>
           <RouterView v-if="isPrimaryRoute()" />
         </keep-alive>
         <RouterView v-if="!isPrimaryRoute()" />
-      </tiny-main>
-      <tiny-footer>
+      </tiny-row>
+      <tiny-row>
         <div class="footer-content">
           <div class="footer-logo">
             <h2>国学经典</h2>
@@ -177,7 +225,7 @@ onUnmounted(() => {
         <div class="copyright">
           <p>© 2023-2024 国学经典学习网站 - 传承中华文化，弘扬国学精神</p>
         </div>
-      </tiny-footer>
+      </tiny-row>
     </tiny-layout>
 
     <!-- 移动端底部导航 -->
@@ -244,6 +292,13 @@ onUnmounted(() => {
   max-width: 1200px;
   margin: 0 auto;
   height: 64px;
+}
+.tiny-menu-demo {
+  flex: auto;
+}
+.tiny-nav-menu {
+  box-shadow: none;
+  margin: 0 auto;
 }
 
 .logo {
